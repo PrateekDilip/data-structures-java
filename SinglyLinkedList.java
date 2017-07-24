@@ -31,10 +31,10 @@ class linkedlist {
         end = null;
         size = 0;
     } 
-    public isEmpty() {
+    public boolean isEmpty() {
         return start == null;
     }
-    public getSize() {
+    public int getSize() {
         return size;
     }
 }
