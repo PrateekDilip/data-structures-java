@@ -37,11 +37,22 @@ class linkedlist {
     public int getSize() {
         return size;
     }
+    public void insertAtEnd(int val) {
+        node temp = new node(val, null);
+        size++;
+        if(start == null) {
+            start = temp;
+            end = start;
+        } else {
+            end.setLink(temp);
+            end = temp;
+        }
+    }
 }
 
 
 public class SinglyLinkedList {
     public static void main (String args[]) {
-        
+            
     }
 }
