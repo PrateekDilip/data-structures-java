@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class node {
     protected int data; 
     protected node link;
@@ -48,11 +49,29 @@ class linkedlist {
             end = temp;
         }
     }
+    public void display() {
+        if (size == 0) {
+            System.out.println("List is empty\n");
+            return;
+        }
+        node ptr = start;
+        while (ptr.getLink() != null) {
+            System.out.print(ptr.getData()+ "->");
+            ptr = ptr.getLink();
+        }
+            System.out.print(ptr.getData()+ "\n");
+    }
 }
 
 
 public class SinglyLinkedList {
     public static void main (String args[]) {
-            
+        Scanner scan = new Scanner(System.in);
+        linkedlist list = new linkedlist();
+        list.insertAtEnd(scan.nextInt());         
+        list.insertAtEnd(scan.nextInt());         
+        list.insertAtEnd(scan.nextInt());         
+        list.insertAtEnd(scan.nextInt());         
+        list.display();
     }
 }
