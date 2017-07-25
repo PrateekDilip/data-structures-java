@@ -50,6 +50,10 @@ class linkedlist {
         }
     }
     public void display() {
+        if (start.getLink() == null) { 
+            System.out.print(start.getData()+ "->");
+            return;
+        }
         if (size == 0) {
             System.out.println("List is empty\n");
             return;
